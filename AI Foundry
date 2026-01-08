@@ -1,0 +1,56 @@
+
+Introduction to Azure AI Foundry
+[00:02] If you're looking to create agentic solutions and want to move quickly and efficiently, Azure AI Foundry is the one place for discovering and accessing the right building blocks for your agents.
+
+[00:17] It is a unified platform that supports the entire AI development life cycle, from initial concept and early experimentation to coding, pre-production assessment, and management in production.
+
+The Model Catalog and Specialized Models
+[00:52] You can access Azure AI Foundry at ai.azure.com. The model catalog helps you discover thousands of models, including premium LLMs from OpenAI, Meta, DeepSeek, and Cohere, as well as small language models like Microsoft Phi.
+
+[01:24] There are also hundreds of open models from Hugging Face and area-specific models, such as Mistral for European languages and Jais for Arabic, along with industry-specific models.
+
+[01:47] The catalog is hosted on Microsoft supercomputer infrastructure for optimized cost and performance.
+
+Deployment and Experimentation
+[01:57] You can run models on managed compute or use a serverless API option for popular premium models. You can also bring your own models to run on Azure infrastructure.
+
+[02:11] The Playground for Agents allows for experimentation. You can ground models using uploaded files, search indexes, Bing web knowledge, Microsoft Fabric, or SharePoint data.
+
+[02:40] You can define actions for agents, such as calling APIs or using a Code Interpreter to run Python.
+
+Unified Developer Experience
+[03:03] Azure AI Foundry integrates with your existing coding workspaces. It offers cloud-hosted Dev environments and integrates with GitHub, Visual Studio, and Copilot Studio.
+
+[03:51] You can use a single API via the AI Foundry SDK to connect to different models through the new AI model inference endpoint, allowing you to switch models without changing underlying code.
+
+Evaluation, Safety, and Security
+[04:15] The platform offers centralized observability for debugging and performance checks. Automated evaluations assess quality metrics like relevance, groundedness, and fluency.
+
+[05:03] Built-in safety controls go beyond system prompts to automatically detect and block unwanted content involving violence, hate, or self-harm.
+
+[06:11] Management tools allow for governance, quota management, and identity-based access through Microsoft Entra, Purview, and Defender.
+
+Example: Building a Multi-Agent Application
+[06:57] The video demonstrates a four-agent report-writing solution:
+
+Researcher Agent: Gathers data from the web using Bing.
+
+Writer Agent: Drafts the report and requests more research if needed.
+
+Editor Agent: Reviews and requests edits until satisfied.
+
+Sender Agent: Emails the final report via Outlook.
+
+[08:12] The setup involves naming the agent, selecting a model (e.g., GPT-4o), and providing specific instructions and knowledge sources.
+
+[10:20] These agents are then wired together using Semantic Kernel or other orchestration frameworks like AutoGen or LangChain.
+
+Conclusion
+[12:18] The multi-agent workflow successfully generated a report and delivered it to an inbox, demonstrating how AI Foundry automates complex business processes.
+
+[12:34] To get started, visit ai.azure.com.
+
+Video URL: https://youtu.be/GD7MnIwAxYM
+
+Introducing Azure AI Foundry - Everything you need for AI development
+Microsoft Mechanics ·
