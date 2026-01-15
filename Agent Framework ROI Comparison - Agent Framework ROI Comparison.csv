@@ -1,0 +1,12 @@
+Framework,Availability / Platform,How to Start,ROI & Efficiency Profile,Effort vs. Scalability
+Flowise,Self-hosted / Cloud,npx flowise start,High Speed ROI: Instant value for simple internal tools. Low ops cost.,Low Effort / Moderate Scalability: Best for MVPs; performance can dip for high-concurrency tasks.
+LangGraph,Python / JS Library,pip install langgraph,"Max Long-term ROI: High accuracy reduces ""human-in-the-loop"" costs significantly.","High Effort / Elite Scalability: Steep curve, but built for heavy, complex enterprise loads."
+OpenAI AgentKit,OpenAI Web Platform,platform.openai.com,Immediate Efficiency: Zero infrastructure cost; pay only for tokens used.,"Low Effort / High Scalability: Scales instantly via OpenAI, but customization is capped."
+Google ADK,Python / Java SDK,pip install google-adk,Optimized Efficiency: Lower latency/cost when using Gemini-specific features.,"Moderate Effort / High Scalability: Requires coding, but leverages Google's global infra."
+Vertex AI Builder,Google Cloud (GCP),Enable API in Console,"Enterprise ROI: High security/compliance value; reduces ""data leakage"" risks.",Moderate Effort / Elite Scalability: Managed by Google; handles massive request volumes.
+Azure AI Agent,Microsoft Azure,Azure Portal / Foundry,Ecosystem ROI: High value if you already use M365/Teams; saves on integration.,"Moderate Effort / Elite Scalability: Built for large-scale, compliant corporate deployment."
+Semantic Kernel,SDK (.NET/Python),dotnet add package...,"Stability ROI: Predictable maintenance for C# teams; lowers ""technical debt"" costs.",High Effort / High Scalability: Robust for rigid enterprise apps; slower to prototype.
+Amazon Bedrock,AWS Cloud,AWS Console / Boto3,"Cost-Efficiency: Pay-as-you-go with ""Provisioned Throughput"" for discounts.",Moderate Effort / Elite Scalability: Model-agnostic; scales horizontally with ease.
+CrewAI,Python Library,pip install crewai,Labor ROI: Multi-agent collaboration replaces complex manual research flows.,Low Effort / Moderate Scalability: Easy to set up; multi-agent loops can be hard to optimize.
+Zapier Agents,Zapier Web,agents.zapier.com,"Task ROI: Massive time savings on repetitive business ""bridge"" tasks.",Zero Effort / Low Scalability: Easy to break with complex logic; gets expensive at high volume.
+n8n,Self-hosted / Cloud,npx n8n,Privacy ROI: Low cost of ownership if self-hosted; avoids vendor token markups.,"Moderate Effort / High Scalability: Highly flexible ""glue"" for agents; requires some DevOps."

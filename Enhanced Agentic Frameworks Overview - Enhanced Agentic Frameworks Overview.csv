@@ -1,0 +1,12 @@
+Framework,Availability / Platform,How to Start (Setup),When to Use,Pros,Cons
+Flowise,Self-hosted (Docker/Node) or Cloud,npx flowise start,Quickly prototype LangChain agents via drag-and-drop.,Fast prototyping; visual interface; large template library.,Limited for complex logic; Node.js based.
+LangGraph,Python / JS Library (Open Source),pip install langgraph,"Precise, stateful control over complex production workflows.",Industry standard; handles cyclic loops; highly customizable.,Steep learning curve; requires solid coding skills.
+OpenAI AgentKit,OpenAI API Platform (Web),Sign up at platform.openai.com,Visual agent building inside the OpenAI ecosystem.,Zero-config; native access to GPT-4/o1; excellent UI.,Vendor lock-in; cloud-only; limited autonomy.
+Google ADK,Python / Java SDK (Open Source),pip install google-adk,Code-first agents deeply integrated with Gemini models.,Optimized for Gemini; handles multi-agent teams well.,Primarily for GCP users; still evolving.
+Vertex AI Agent Builder,Google Cloud Platform (GCP),Enable API in GCP Console,"Fully managed, production-grade agents on Google Cloud.",Managed infrastructure; enterprise security; easy RAG.,"Higher cost; less ""hackable"" than open-source."
+Azure AI Agent Service,Microsoft Azure,Azure Portal / AI Foundry,"Fully managed, compliant enterprise agents on Azure.",Enterprise-grade; connects to M365; managed memory.,Azure-centric; pricing can be complex.
+Semantic Kernel,"SDK (.NET, Python, Java)",dotnet add package Microsoft.SemanticKernel,Building multi-language agents in enterprise ecosystems.,"Supports C#/.NET; structured ""Planner"" system; very stable.",Smaller community than LangChain; rigid architecture.
+Amazon Bedrock Agents,AWS (Amazon Web Services),AWS Console / Boto3 SDK,"Managed, enterprise-scale agents within the AWS stack.",Model agnostic (Claude/Llama); managed orchestration.,AWS lock-in; limited fine-grained control of loops.
+CrewAI,Python Library (Open Source),pip install crewai,Role-based autonomous agent teams for research/content.,Great multi-agent logic; easy to define roles/tasks.,Coordination of many agents can be hard to debug.
+Zapier Agents,Zapier Web Platform,Sign up at agents.zapier.com,Simple AI decision-making for business automations.,"6,000+ app integrations; pure no-code.",Limited reasoning depth; can get expensive.
+n8n,Self-hosted or Managed Cloud,npx n8n,Visual low-code workflows with deep custom code support.,Self-hostable (privacy); flexible; huge integration list.,Steeper curve than Zapier; requires server management.
