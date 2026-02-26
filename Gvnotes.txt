@@ -1,9 +1,31 @@
+The multi-agent system based on Semantic Kernel is used for Backend. The Planner would coordinate the analysis of existing and new requirements and data from your Vector and Graph DBs, while the Code Rewriter and Configuration Management would execute the necessary updates and generate new test cases, culminating in the zipped project by the Zipper Agent.
+
+
+Summary of the agents and their roles for your Pytest framework generation project:
+​Planner Agent:
+​Interprets new requirements and understands the existing framework from Graph DB and Vector DB.
+​Devises a comprehensive plan for modification and new test case generation.
+​Configuration Management Agent:
+​Handles complex configuration data from Vector and Graph DBs.
+​Ensures consistency and validates configurations across the framework.
+​Code Rewriter Agent:
+​Performs the actual code changes, copies existing content, and generates new test cases based on the plan.
+​Project Assembler/Zipper Agent:
+​Structures the revised framework, ensures all dependencies are met, and finalizes the project into a zipped file.
+
+
+
 ​A Planner Agent: To interpret the new requirements, understand the existing framework from the Graph DB and Vector DB, and devise a comprehensive plan for modification.
 ​A Code Generator/Rewriter Agent: To perform the actual code changes, copy existing content, and add new test cases based on the plan.
+Configuration Management Agent: To perform query and interpret the configuration data from your Vector DB or Graph DB.
 ​A Project Assembler/Zipper Agent: To structure the revised framework, ensure all dependencies are met, and finally compress it into a zip file.
 
 
+Code Rewriter Agent can definitely interact with the Vector DB. In Semantic Kernel, you would implement that functionality by creating custom skills or connectors that query the Vector DB, retrieve the relevant code snippets and paths, and pass them as context to the agent for analysis and rewriting.
 
+
+
+The Configuration Management Agent can be designed to similarly query and interpret the configuration data from your Vector DB or Graph DB. This ensures the agent has access to the necessary contextual information to accurately manage and update the Pytest framework.
 
 
 
