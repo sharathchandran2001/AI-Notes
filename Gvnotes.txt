@@ -1,3 +1,13 @@
+​A Planner Agent: To interpret the new requirements, understand the existing framework from the Graph DB and Vector DB, and devise a comprehensive plan for modification.
+​A Code Generator/Rewriter Agent: To perform the actual code changes, copy existing content, and add new test cases based on the plan.
+​A Project Assembler/Zipper Agent: To structure the revised framework, ensure all dependencies are met, and finally compress it into a zip file.
+
+
+
+
+
+
+
 Here is the summary of AI risks in mortgage businesses: 1. Algorithmic Bias: Risk of discriminatory lending practices due to biased AI models. 2. AI Hallucinations: Potential for incorrect decisions based on erroneous AI outputs. 3. Data Privacy & Security: Vulnerabilities in protecting sensitive mortgage data. 4. Over-reliance: Risks from inadequate human oversight in AI-driven processes.
 =====
 : 1. Algorithmic Bias: Risk of discriminatory lending practices due to biased AI Models.
