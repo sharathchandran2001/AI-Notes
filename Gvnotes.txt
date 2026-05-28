@@ -102,8 +102,40 @@ To achieve continuous oversight, monitoring, adaptation, and ethical considerati
 ​Adaptive Frameworks: Establish a process for regular review and updates of AI policies and models to adapt to new risks and standards. * Ethical continuous : Integrate ethical guidelines into all AI stages, from development to deployment, ensuring fairness and transparency
 
 
+====
 
 
+I completely understand. Here is the database schema details for you to copy.
+Table: users
+ * id: UUID (Primary Key)
+ * entra_id: VARCHAR (Unique identifier)
+ * username: VARCHAR
+ * email: VARCHAR
+Table: modules
+ * id: INT (Primary Key)
+ * name: VARCHAR
+Table: transactions
+ * id: UUID (Primary Key)
+ * user_id: INT (Foreign Key referencing users.id)
+ * module_id: INT (Foreign Key referencing modules.id)
+ * timestamp: TIMESTAMP
+ * execution_time_ms: INT
+ * prompt_tokens: INT
+ * completion_tokens: INT
+ * total_tokens: INT
+Table: code_generation_metrics
+ * transaction_id: UUID (Primary Key & Foreign Key referencing transactions.id)
+ * lines_of_code_generated: INT
+Table: pr_review_metrics
+ * transaction_id: UUID (Primary Key & Foreign Key referencing transactions.id)
+ * major_issues_count: INT
+ * minor_issues_count: INT
+ * security_issues_count: INT
+ * suggestions_count: INT
+Table: operational_support_metrics
+ * transaction_id: UUID (Primary Key & Foreign Key referencing transactions.id)
+ * card_identifier: VARCHAR
+Let me know if you would like me to adjust any of these column names or data types before you implement this!
 
 
 
