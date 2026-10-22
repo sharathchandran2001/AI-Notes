@@ -1,0 +1,57 @@
+ROLE
+You are a Principal AI Security & GenAI Solutions Architect with deep experience in
+enterprise RAG systems, PII/PHI protection, and regulated-industry AI governance
+(HR, Healthcare, Finance).
+
+CONTEXT: EXISTING BASELINE ARCHITECTURE
+I have a "Generative AI Guardrails" architecture with this flow:
+- Data Sources (documents, audio, chat, video) -> Data Ingest -> Vector DB
+- User Questions -> User Query -> "Prompt + Query + Enhanced Context (Under Review)"
+- After review -> "Approved Context" -> LLM (Local and External) -> LLM Response -> User
+- Human-in-the-loop (HITL) reviews both the ingest side (Vector DB) and the
+  prompt/context side.
+
+Four guardrail "Enablers" gate the pipeline:
+1. Vector DB Similarity Search - restricted knowledge base per domain
+   (e.g., HR / Healthcare / Finance) -> RAG Embeddings Review
+2. Local Pre-trained LLM (PII-BERT or similar specialized PII model) ->
+   Prompt + Query + Enhanced Context Review
+3. AnonLLM Check -> Prompt + Query + Enhanced Context (Anonymizer)
+4. Data Masking & Mapper -> Prompt + Query + Enhanced Context (Masking & Data Mapper)
+
+TASK
+Design an ADVANCED, production-grade version of this guardrail architecture.
+Keep the four enablers, but extend and harden them.
+
+REQUIREMENTS
+1. Pipeline stages: Separate guardrails into Ingestion-time, Retrieval-time,
+   Pre-LLM (input), In-LLM (system prompt/tool policy), and Post-LLM (output).
+   Add the missing OUTPUT guardrails (PII leakage, hallucination/groundedness
+   check, toxicity, policy compliance, de-masking via the Mapper).
+2. Threat coverage: Prompt injection (direct and indirect via RAG documents),
+   jailbreaks, data exfiltration, cross-tenant leakage, embedding inversion,
+   model poisoning, over-privileged tool/agent calls.
+3. Access control: Role- and attribute-based access (RBAC/ABAC) enforced at
+   the vector-store and document level, not just the prompt level.
+4. Routing logic: Decide when a request goes to the LOCAL LLM vs. the EXTERNAL
+   LLM based on data sensitivity classification (Public / Internal /
+   Confidential / Restricted).
+5. HITL design: Define exactly when human review is triggered (risk score
+   thresholds, low-confidence detections, new data sources), SLAs, and the
+   feedback loop that improves detectors.
+6. Policy engine: Central, configurable policy-as-code layer (e.g., OPA or
+   YAML rules) so guardrails can change without redeploying the pipeline.
+7. Observability & audit: Logging, tracing, immutable audit trail,
+   metrics (false-positive/negative rates, latency per guardrail, block rates).
+8. Performance: Latency budget per stage, parallel vs. sequential execution,
+   caching, and fail-open vs. fail-closed decisions per guardrail.
+9. Compliance mapping: Map controls to GDPR, HIPAA, SOC 2, and the
+   OWASP Top 10 for LLM Applications / NIST AI RMF.
+10. Testing: Red-team plan, adversarial test suite, regression evals, and
+    guardrail benchmark metrics.
+
+TECH CONSTRAINTS
+- Preferred stack: Python, FastAPI, Node.js/React frontend, [Vector DB: e.g.
+  Chroma / pgvector / Pinecone], [LLMs: e.g. local Llama/Mistral + external
+  Claude/GPT].
+- Candidate tools to evaluate: Microsoft Presidio, NeMo Guardrails,
