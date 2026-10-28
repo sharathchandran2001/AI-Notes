@@ -1,3 +1,48 @@
+# AI Agent Governance Framework
+
+## Goal
+* Establish a reliable governance framework to ensure AI agents act safely, effectively, and in alignment with organizational values and intentions. [00:01:08]
+
+## Objectives
+* Create policies, processes, and controls for agentic AI. [00:01:24]
+* Ensure ongoing evaluation and adaptability as agent capabilities and regulations evolve. [00:00:33], [00:09:26]
+
+---
+
+## 5 Essential Pillars & Action Items
+
+* Pillar 1: Alignment [00:01:42]
+  * Create a code of ethics that states values, ethics, and standards of conduct to embed into every project. [00:02:12]
+  * Define metrics and tests for detecting goal drift, run before deployment and regularly afterwards. [00:02:35]
+  * Assemble a governance review board to ensure regulatory compliance (e.g., EU AI Act), review test results, and approve deployments. [00:02:54]
+  * Automate audits that check agent outputs against specifications. [00:03:04]
+  * Create risk profiles based on organizational risk preferences and encode them into agent parameters. [00:03:14]
+
+* Pillar 2: Control [00:03:27]
+  * Make an action authorization policy delineating autonomous actions versus human-in-the-loop requirements. [00:03:51]
+  * Build a tool catalog to ensure only approved tools (databases, APIs, plugins) are used and to capture tool lineage. [00:04:10]
+  * Conduct shutdown and rollback drills to test intervention speed and procedures. [00:04:29]
+  * Design a kill switch mechanism featuring soft stops for orderly shutdowns and hard stops for emergency terminations. [00:04:42]
+  * Keep activity logs recording every agent action, input, and output. [00:04:59]
+
+* Pillar 3: Visibility [00:05:10]
+  * Assign unique agent IDs to trace behavior across environments. [00:05:40]
+  * Define an incident investigation protocol with clear steps from log retrieval to root cause analysis. [00:05:49]
+  * Evaluate cooperation capabilities by automating continuous testing for multi-agent interactions to detect coordination failures. [00:06:11]
+
+* Pillar 4: Security [00:06:22]
+  * Create a threat modeling framework to identify and mitigate prompt injections, adversarial inputs, and vulnerabilities. [00:06:55]
+  * Build a sandboxed environment for isolated, monitored agent execution. [00:07:18]
+  * Do regular adversarial testing by challenging agents with adversarial inputs to evaluate resilience. [00:07:35]
+  * Build in access controls so only authorized users can provide instructions. [00:07:45]
+
+* Pillar 5: Societal Integration [00:07:59]
+  * Define an accountability strategy outlining legal responsibility among developers, business owners, auditors, and users. [00:08:33]
+  * Create a plan for regulatory engagement to maintain active dialogues with industries and regulators. [00:08:49]
+  * Build a legal rules engine that automatically vets proposed actions against laws. [00:09:06]
+
+
+
 ROLE
 You are a Principal AI Security & GenAI Solutions Architect with deep experience in
 enterprise RAG systems, PII/PHI protection, and regulated-industry AI governance
